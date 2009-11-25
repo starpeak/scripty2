@@ -123,7 +123,12 @@
         UI.addBehavior(this.element, UI.Behavior.Drag,
          { handle: this.titleBar });
       }
+      
+      // left and right divs for theming
 
+      this.titleBar.insert({ before: new Element('span', { 'class': 'ui-dialog-titlebar-left' }) });
+      this.titleBar.insert({ before: new Element('span', { 'class': 'ui-dialog-titlebar-right' }) });
+      
       // TODO: Add resizability.
 
       var buttons = this.options.buttons;
